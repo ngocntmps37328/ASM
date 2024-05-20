@@ -1,0 +1,222 @@
+
+.language-nav{
+height:30px;
+background-color: rgb(214, 214, 214);
+font-size: 14px; 
+padding-right:120px;  
+font-weight: 500; 
+}
+.shopping-nav{
+height:70px;
+font-size: 16px; 
+font-weight: 500; 
+background-color: white;
+}
+.shopping-nav>.container-fluid{
+margin-left:50px;
+margin-right: 50px;
+}
+.navbar .dropdown-toggle::after {
+    display: none;
+}
+video::-webkit-media-controls {
+    display: none;
+}
+video {
+  display: none;
+  pointer-events: none;
+}
+.btn{
+  font-weight: bold;
+  padding:15px 20px;
+}
+.carousel-caption.prod-list {
+  text-align: left;
+  left: 9%;
+  right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width:500px;
+  font-size: 18px;
+}
+.carousel-item {
+  max-height: 500px; /* Set the desired max height */
+  overflow: hidden;
+}
+
+.carousel-item {
+  max-height: 900px; /* Set a fixed height for the carousel items */
+}
+
+.carousel-item img,
+.carousel-item video {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.carousel-item video {
+  max-height: 900px; /* Match this with the carousel item height */
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #088178;  /* Set underline color */
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  background: #088178; /* Set underline color on hover */
+}
+
+.navbar {
+  padding: 1rem;
+}
+
+.navbar-brand img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-nav .nav-link{
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover,.navbar-nav .nav-link.active  {
+  color: #088178;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #088178;
+  transition: transform 0.5s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-nav .dropdown-item {
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .dropdown-item:hover {
+  color: #088178;
+}
+.navbar-nav .dropdown-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #088178;
+  transition: transform 0.5s ease-out;
+}
+
+.navbar-nav .dropdown-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.form-control {
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+}
+
+.btn-outline {
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  color: black;
+}
+
+.btn-outline:hover {
+  background-color: #088178;
+  color: white;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1rem;
+}
+.card{
+  border:none;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding-top: 50px ;
+  padding-bottom: 20px ;
+  margin-top:20px;
+}
+.footer h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer ul li {
+  margin-bottom: 10px;
+}
+.footer ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+.footer ul li a:hover {
+  color: #088178;
+}
+.footer-column .sub a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #088178;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.footer-column .sub a:hover {
+  background-color: #065c5c;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+.footer .font a {
+  font-size: 24px;
+  color: #000;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+.footer .font a:hover {
+  color: #088178;
+}

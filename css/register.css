@@ -1,0 +1,106 @@
+
+
+body {
+    background-image: url(../images/products/chinhno.webp);
+    background-size: cover;
+    background-attachment: fixed; /* Giúp hình nền cố định khi cuộn */
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.card-custom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    max-width: 650px;
+    margin: 50px auto;
+    background-color: rgba(15, 16, 17, 0.8); /* Sử dụng rgba để làm nền mờ */
+    backdrop-filter: blur(10px); /* Làm mờ nền phía sau */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    z-index: 999;
+}
+
+.card-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+}
+
+.card-header-custom h3 {
+    margin: 0;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.form-label {
+    color: white;
+}
+
+.input-group input,
+.input-group span {
+    font-size: 17px;
+    border: 1px solid #ccc; 
+    padding: 10px;
+    border-radius: 5px;
+}
+.link-custom {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.link-custom:hover {
+    text-decoration: underline;
+}
+
+/* css button */
+.button-86 {
+    all: unset;
+    width: 570px;
+    height: 50px;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding:5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #b10e12; /* Màu nền của nút */
+    transition: all 0.4s;
+}
+
+
+.accordion-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.accordion-body {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+.accordion-header {
+    margin-bottom: 0.25rem;
+}
