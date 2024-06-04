@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/listproduct.css">
 </head>
 
-<body ng-controller="myctrl">
+<body>
 
     <!-- breadcrumb -->
     <div class="container">
@@ -27,13 +27,13 @@
     </div>
     <!-- breadcrumb -->
     <!-- bar-search -->
-    <div class="container-fluid bar-search " >
+    <div class="container-fluid bar-search ">
         <div class="row">
             <!-- Results Section -->
             <div class="col-md-6">
                 <div class="d-flex align-items-center row" style="margin-left: 30px; padding: 30px;">
                     <h5 class="me-3">KẾT QUẢ</h5>
-                    <div><span>120 sản phẩm</span></div>
+                    <div><span>{{products.length}} sản phẩm</span></div>
                 </div>
             </div>
 
@@ -318,28 +318,17 @@
                     <div class="col-lg-4 col-md-6 poly-prod" ng-repeat="item in products">
                         <div class="card">
                             <div class="image-container">
-                                <img src="{{item.img}}"
-                                    class="card-img-top img-thumbnail" alt="product image">
+                                <img ng-src="{{item.img}}" class="card-img-top img-thumbnail" alt="product image">
                                 <a href="#" class="cart-icon"><i class="fa-solid fa-heart-circle-plus"></i></a>
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center">
                                     <fieldset>
-                                        <img class="img-thumbnail pick-color"
-                                            src="{{item.colors.color[0]}}"
-                                            alt="">
-                                        <img class="img-thumbnail pick-color"
-                                            src="{{item.colors.color[1]}}"
-                                            alt="">
-                                        <img class="img-thumbnail pick-color"
-                                            src="{{item.colors.color[2]}}"
-                                            alt="">
-                                        <img class="img-thumbnail pick-color"
-                                            src="{{item.colors.color[3]}}"
-                                            alt="">
-                                        <img class="img-thumbnail pick-color"
-                                            src="{{item.colors.color[4]}}"
-                                            alt="">
+                                        <img class="img-thumbnail pick-color" ng-src="{{item.colors[0].thumb}}" alt="">
+                                        <img class="img-thumbnail pick-color" ng-src="{{item.colors[1].thumb}}" alt="">
+                                        <img class="img-thumbnail pick-color" ng-src="{{item.colors[2].thumb}}" alt="">
+                                        <img class="img-thumbnail pick-color" ng-src="{{item.colors[3].thumb}}" alt="">
+                                        <img class="img-thumbnail pick-color" ng-src="{{item.colors[4].thumb}}" alt="">
                                     </fieldset>
                                 </div>
                             </div>
@@ -362,228 +351,231 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="container mt-5">
-        <h2 class="mb-4">ĐÃ XEM GẦN ĐÂY</h2>
-        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="image-container">
-                                    <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
-                                        class="card-img-top img-thumbnail" alt="product image">
-                                    <a href="#" class="cart-icon"><i class="fa-solid fa-heart-circle-plus"></i></a>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 text-center">
-                                        <fieldset>
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
-                                                alt="">
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <span class="col-sm-6">NỮ</span>
-                                    <span class="col-sm-6 ms-auto">XXL</span>
-                                </div>
-                                <div class="card-body">
-                                    <h5 style="text-align: left;">Áo Thun Cổ Thuyền</h5>
-                                    <h4 style="text-align: left; font-weight: bold;">244.000 VND</h4>
-                                    <div class="row">
-                                        <div class="star-wrap">
-                                            <input type="radio" name="rate1" />
-                                            <input type="radio" name="rate2" />
-                                            <input type="radio" name="rate3" />
-                                            <input type="radio" name="rate4" />
-                                            <input type="radio" name="rate5" />
-                                        </div>
-                                        <p style="padding-top:10px;width: 60px;height:40px;">(104)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="image-container">
-                                    <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
-                                        class="card-img-top img-thumbnail" alt="product image">
-                                    <a href="#" class="cart-icon"><i class="fa-solid fa-heart-circle-plus"></i></a>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 text-center">
-                                        <fieldset>
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
-                                                alt="">
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <span class="col-sm-6">NỮ</span>
-                                    <span class="col-sm-6 ms-auto">XXL</span>
-                                </div>
-                                <div class="card-body">
-                                    <h5 style="text-align: left;">Áo Thun Cổ Thuyền</h5>
-                                    <h4 style="text-align: left; font-weight: bold;">244.000 VND</h4>
-                                    <div class="row">
-                                        <div class="star-wrap">
-                                            <input type="radio" name="rate1" />
-                                            <input type="radio" name="rate2" />
-                                            <input type="radio" name="rate3" />
-                                            <input type="radio" name="rate4" />
-                                            <input type="radio" name="rate5" />
-                                        </div>
-                                        <p style="padding-top:10px;width: 60px;height:40px;">(104)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="image-container">
-                                    <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
-                                        class="card-img-top img-thumbnail" alt="product image">
-                                    <a href="#" class="cart-icon"><i class="fa-solid fa-heart-circle-plus"></i></a>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 text-center">
-                                        <fieldset>
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
-                                                alt="">
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <span class="col-sm-6">NỮ</span>
-                                    <span class="col-sm-6 ms-auto">XXL</span>
-                                </div>
-                                <div class="card-body">
-                                    <h5 style="text-align: left;">Áo Thun Cổ Thuyền</h5>
-                                    <h4 style="text-align: left; font-weight: bold;">244.000 VND</h4>
-                                    <div class="row">
-                                        <div class="star-wrap">
-                                            <input type="radio" name="rate1" />
-                                            <input type="radio" name="rate2" />
-                                            <input type="radio" name="rate3" />
-                                            <input type="radio" name="rate4" />
-                                            <input type="radio" name="rate5" />
-                                        </div>
-                                        <p style="padding-top:10px;width: 60px;height:40px;">(104)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="image-container">
-                                    <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
-                                        class="card-img-top img-thumbnail" alt="product image">
-                                    <a href="#" class="cart-icon"><i class="fa-solid fa-heart-circle-plus"></i></a>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 text-center">
-                                        <fieldset>
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
-                                                alt="">
-                                            <img class="img-thumbnail pick-color"
-                                                src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
-                                                alt="">
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <span class="col-sm-6">NỮ</span>
-                                    <span class="col-sm-6 ms-auto">XXL</span>
-                                </div>
-                                <div class="card-body">
-                                    <h5 style="text-align: left;">Áo Thun Cổ Thuyền</h5>
-                                    <h4 style="text-align: left; font-weight: bold;">244.000 VND</h4>
-                                    <div class="row">
-                                        <div class="star-wrap">
-                                            <input type="radio" name="rate1" />
-                                            <input type="radio" name="rate2" />
-                                            <input type="radio" name="rate3" />
-                                            <input type="radio" name="rate4" />
-                                            <input type="radio" name="rate5" />
-                                        </div>
-                                        <p style="padding-top:10px;width: 60px;height:40px;">(104)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    
+                    </div>
                 </div>
-                <!-- Add more carousel items here for more products -->
+            <div class="container mt-5">
+                <h2 class="mb-4">ĐÃ XEM GẦN ĐÂY</h2>
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <div class="image-container">
+                                            <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
+                                                class="card-img-top img-thumbnail" alt="product image">
+                                            <a href="#" class="cart-icon"><i
+                                                    class="fa-solid fa-heart-circle-plus"></i></a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <fieldset>
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
+                                                        alt="">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <span class="col-sm-6">NỮ</span>
+                                            <span class="col-sm-6 ms-auto">XXL</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 style="text-align: left;">Áo Thun Cổ Thuyền</h5>
+                                            <h4 style="text-align: left; font-weight: bold;">244.000 VND</h4>
+                                            <div class="row">
+                                                <div class="star-wrap">
+                                                    <input type="radio" name="rate1" />
+                                                    <input type="radio" name="rate2" />
+                                                    <input type="radio" name="rate3" />
+                                                    <input type="radio" name="rate4" />
+                                                    <input type="radio" name="rate5" />
+                                                </div>
+                                                <p style="padding-top:10px;width: 60px;height:40px;">(104)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <div class="image-container">
+                                            <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
+                                                class="card-img-top img-thumbnail" alt="product image">
+                                            <a href="#" class="cart-icon"><i
+                                                    class="fa-solid fa-heart-circle-plus"></i></a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <fieldset>
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
+                                                        alt="">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <span class="col-sm-6">NỮ</span>
+                                            <span class="col-sm-6 ms-auto">XXL</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 style="text-align: left;">Áo Thun Cổ Thuyền</h5>
+                                            <h4 style="text-align: left; font-weight: bold;">244.000 VND</h4>
+                                            <div class="row">
+                                                <div class="star-wrap">
+                                                    <input type="radio" name="rate1" />
+                                                    <input type="radio" name="rate2" />
+                                                    <input type="radio" name="rate3" />
+                                                    <input type="radio" name="rate4" />
+                                                    <input type="radio" name="rate5" />
+                                                </div>
+                                                <p style="padding-top:10px;width: 60px;height:40px;">(104)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <div class="image-container">
+                                            <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
+                                                class="card-img-top img-thumbnail" alt="product image">
+                                            <a href="#" class="cart-icon"><i
+                                                    class="fa-solid fa-heart-circle-plus"></i></a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <fieldset>
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
+                                                        alt="">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <span class="col-sm-6">NỮ</span>
+                                            <span class="col-sm-6 ms-auto">XXL</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 style="text-align: left;">Áo Thun Cổ Thuyền</h5>
+                                            <h4 style="text-align: left; font-weight: bold;">244.000 VND</h4>
+                                            <div class="row">
+                                                <div class="star-wrap">
+                                                    <input type="radio" name="rate1" />
+                                                    <input type="radio" name="rate2" />
+                                                    <input type="radio" name="rate3" />
+                                                    <input type="radio" name="rate4" />
+                                                    <input type="radio" name="rate5" />
+                                                </div>
+                                                <p style="padding-top:10px;width: 60px;height:40px;">(104)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <div class="image-container">
+                                            <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
+                                                class="card-img-top img-thumbnail" alt="product image">
+                                            <a href="#" class="cart-icon"><i
+                                                    class="fa-solid fa-heart-circle-plus"></i></a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <fieldset>
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
+                                                        alt="">
+                                                    <img class="img-thumbnail pick-color"
+                                                        src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
+                                                        alt="">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <span class="col-sm-6">NỮ</span>
+                                            <span class="col-sm-6 ms-auto">XXL</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 style="text-align: left;">Áo Thun Cổ Thuyền</h5>
+                                            <h4 style="text-align: left; font-weight: bold;">244.000 VND</h4>
+                                            <div class="row">
+                                                <div class="star-wrap">
+                                                    <input type="radio" name="rate1" />
+                                                    <input type="radio" name="rate2" />
+                                                    <input type="radio" name="rate3" />
+                                                    <input type="radio" name="rate4" />
+                                                    <input type="radio" name="rate5" />
+                                                </div>
+                                                <p style="padding-top:10px;width: 60px;height:40px;">(104)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Add more carousel items here for more products -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <script src="js/detail.js"></script>
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/896df3cdf4.js" crossorigin="anonymous"></script>
+            <script src="js/detail.js"></script>
+            <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://kit.fontawesome.com/896df3cdf4.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
