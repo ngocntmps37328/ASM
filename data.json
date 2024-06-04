@@ -54,34 +54,30 @@
         "id": 2,
         "name": "Áo Thun Sọc Ngựa Vằn",
         "sex": "Nữ",
-        "price": 244.000,
+        "price": 244000,
         "size": "XXL",
         "img": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/467363/item/vngoods_69_467363.jpg?width=750",
         "images": [
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/467363/item/vngoods_69_467363.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/467363/item/vngoods_69_467363.jpg?width=750"
             },
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub11.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub11.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/467363/sub/goods_467363_sub13.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/467363/sub/goods_467363_sub13.jpg?width=750"
             },
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub13.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub13.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/467363/sub/goods_467363_sub14.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/467363/sub/goods_467363_sub14.jpg?width=750"
             },
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub14.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub14.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/467363/sub/goods_467363_sub23.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/467363/sub/goods_467363_sub23.jpg?width=750"
             },
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub23.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub23.jpg?width=750"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/sub/vngoods_468625_sub28.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/sub/vngoods_468625_sub28.jpg?width=750"
-            }
+                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/467363/sub/vngoods_467363_sub28.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/467363/sub/vngoods_467363_sub28.jpg?width=750"
+            }          
         ],
         "colors": [
             {
@@ -96,33 +92,33 @@
         "id": 3,
         "name": "Áo Ba Lỗ Vải Gân",
         "sex": "Nữ",
-        "price": 244.000,
+        "price": 244000,
         "size": "XXL",
         "img": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/item/vngoods_03_465763.jpg?width=320",
         "images": [
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/item/vngoods_03_465763.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/item/vngoods_03_465763.jpg?width=750"
             },
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub11.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub11.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/sub/vngoods_465763_sub7.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/sub/vngoods_465763_sub7.jpg?width=750"
             },
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub13.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub13.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/465763/sub/goods_465763_sub13.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/465763/sub/goods_465763_sub13.jpg?width=750"
             },
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub14.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub14.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/465763/sub/goods_465763_sub14.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/465763/sub/goods_465763_sub14.jpg?width=750"
             },
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub23.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468625/sub/goods_468625_sub23.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/sub/vngoods_465763_sub23.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/sub/vngoods_465763_sub23.jpg?width=750"
             },
             {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/sub/vngoods_468625_sub28.jpg?width=60",
-                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/sub/vngoods_468625_sub28.jpg?width=750"
+                "thumb": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/sub/vngoods_465763_sub28.jpg?width=60",
+                "large": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/sub/vngoods_465763_sub28.jpg?width=750"
             }
         ],
         "colors": [
@@ -147,7 +143,7 @@
         "id": 4,
         "name": "Áo Polo AIRism Cotton ",
         "sex": "Nữ",
-        "price": 489.000,
+        "price": 489000,
         "size": "XXL",
         "img": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465601/item/vngoods_01_465601.jpg?width=320",
         "images": [
@@ -198,7 +194,7 @@
         "id": 5,
         "name": "Áo Thun Mini Ngắn Tay",
         "sex": "Nữ",
-        "price": 244.000,
+        "price": 244000,
         "size": "XXL",
         "img": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465760/item/vngoods_00_465760.jpg?width=320",
         "images": [
@@ -249,7 +245,7 @@
         "id": 6,
         "name": "Áo Thun Mini Ngắn Tay",
         "sex": "Nữ",
-        "price": 293.000,
+        "price": 293000,
         "size": "XXL",
         "img": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/467212/item/vngoods_11_467212.jpg?width=320",
         "images": [
@@ -300,7 +296,7 @@
         "id": 7,
         "name": "AIRism Áo Thun Lửng",
         "sex": "Nữ",
-        "price": 293.000,
+        "price": 293000,
         "size": "XXL",
         "img": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465762/item/vngoods_30_465762.jpg?width=320",
         "images": [
