@@ -123,11 +123,16 @@ video {
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 0.5rem 1rem;
+  font-size: 14px;
 }
 
 .navbar-nav .dropdown-item:hover {
   color: #088178;
 }
+.navbar-nav li.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
 .navbar-nav .dropdown-item::after {
   content: '';
   position: absolute;

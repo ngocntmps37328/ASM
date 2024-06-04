@@ -1,3 +1,4 @@
+
 .language-nav {
     height: 30px;
     background-color: rgb(214, 214, 214);
@@ -32,10 +33,6 @@ video {
     pointer-events: none;
 }
 
-.btn {
-    font-weight: bold;
-    padding: 15px 20px;
-}
 
 .carousel-caption.prod-list {
     text-align: left;
@@ -144,7 +141,10 @@ video {
 .navbar-nav .dropdown-item:hover {
     color: #088178;
 }
-
+.navbar-nav li.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+  
 .navbar-nav .dropdown-item::after {
     content: '';
     position: absolute;
@@ -256,141 +256,9 @@ video {
     background-color: rgba(230, 230, 230, 0.75);
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 50px;
-    height: 50px;
-    background-size: 100%, 100%;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.color-tile {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
-
-.color-white {
-    background-color: white;
-}
-
-.color-lightgray {
-    background-color: lightgray;
-}
-
-.color-darkgray {
-    background-color: darkgray;
-}
-
-.color-pink {
-    background-color: pink;
-}
-
-.color-red {
-    background-color: red;
-}
-
-.color-orange {
-    background-color: orange;
-}
-
-.color-beige {
-    background-color: beige;
-}
-
-.color-brown {
-    background-color: brown;
-}
-
-.color-yellow {
-    background-color: yellow;
-}
-
-.color-green {
-    background-color: green;
-}
-
-.color-blue {
-    background-color: blue;
-}
-
-.color-purple {
-    background-color: purple;
-}
-
-.poly-prod {
-    text-align: center;
-}
-
-/* Styling for accordion buttons */
-.accordion-button {
-    background-color: #ffffff;
-    /* White background for buttons */
-    color: #333;
-    /* Dark grey text */
-    font-size: 1rem;
-    /* Medium font size */
-    font-weight: bold;
-    /* Bold font weight */
-    border: none;
-    /* Remove border */
-    box-shadow: none;
-    /* Remove box shadow */
-}
-
-/* Hover effects */
-.accordion-button:hover {
-    background-color: #dae0e5;
-    /* Light blue background on hover */
-}
-
-.accordion-item {
-    border-bottom: 1px solid black;
-}
-
-.accordion-button::after {
-    display: inline-block;
-    font-family: "FontAwesome";
-    font-size: 0.8rem;
-    color: #333;
-    transition: transform 0.3s;
-}
-
-/* Rotate arrow when accordion is open */
-.accordion-button:not(.collapsed)::after {
-    transform: rotate(180deg);
-}
-
-/* Styling for the list inside the accordion body */
-.accordion-body ul {
-    padding: 0;
-    list-style: none;
-    /* Remove default list styling */
-}
-
-.accordion-body ul li a {
-    display: block;
-    padding: 0.5rem;
-    text-decoration: none;
-    /* No underline */
-    color: #333;
-    /* Dark grey text */
-    transition: background-color 0.3s;
-    /* Smooth transition for background color */
-}
-
-/* Hover effect for list items */
-.accordion-body ul li a:hover {
-    background-color: #e7f1ff;
-    /* Very light blue background on hover */
-}
 
 /* sản phẩm */
 .card {
-    width: 280px;
     border: 1px solid #ebebeb;
     padding: 13px;
     margin-bottom: 30px;
@@ -425,50 +293,19 @@ video {
     border-radius: 0px;
 }
 
-.star-wrap {
-    width: 180px;
-    align-items: center;
-    /* Căn chỉnh các phần tử theo trục dọc */
-    flex-direction: row-reverse;
-    /* Hiển thị sao từ phải sang trái */
-    justify-content: flex-start;
-    /* Bắt đầu từ mép trái của container */
-    text-align: left;
-    /* Căn trái nội dung bên trong */
-}
-
-input {
-    appearance: none;
-    /* Bỏ style mặc định của input */
-    cursor: pointer;
-    /* Con trỏ khi di chuột qua */
-}
-
-input::before {
-    content: "\2605";
-    /* Biểu tượng ngôi sao */
-    font-size: 2rem;
-    /* Kích thước ngôi sao */
-    color: #ffb800;
-    /* Màu sắc ngôi sao không được chọn */
-}
-
-input:checked::before,
-input:checked~input::before {
-    color: #ffb800;
-    /* Màu sắc ngôi sao khi được chọn */
-}
-
-.col-sm-6 {
-    width: 40%;
-}
 
 .img-thumbnail.pick-color {
     height: 40px;
     width: 40px;
     margin-top: 10px;
 }
-
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 .card img {
     width: 100%;
     /* border-radius: 25px; */
@@ -486,27 +323,97 @@ input:checked~input::before {
     position: relative;
 }
 
-.cart-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    color: #000;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 5px;
-    border-radius: 50%;
-}
-.cart-icon:hover {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    color: rgb(201, 35, 35);
-    background: rgba(255, 255, 255, 0.7);
-    padding: 5px;
-    border-radius: 50%;
-}
-.navbar-nav li.nav-item.dropdown:hover > .dropdown-menu {
-    display: block;
+body {
+    background-color: #f8f9fa;
   }
-  
+  .checkout-container {
+    margin-top: 30px;
+  }
+  .checkout-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .checkout-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .shipping-option, .order-summary, .order-details {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  .order-details img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  .btn-primary, .btn-outline-secondary {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    width: 100%;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  .btn-outline-secondary {
+    border-color: #6c757d;
+  }
+  .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  .payment-container {
+    margin-top: 30px;
+  }
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .payment-option, .card-details {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  .btn-primary {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    background-color: #000;
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: #333;
+  }
+  .card-details {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  .tooltip-inner {
+    max-width: none;
+    width: 380px;
+    background-color:white;
+  }
+  .order-summary {
+    background-color: #f8f9fa;
+    border-left: 5px solid red; /* Blue border for emphasis */
+    padding: 20px;
+    border-radius: 5px;
+}

@@ -34,7 +34,7 @@ video {
 
 .btn {
     font-weight: bold;
-    padding: 15px 20px;
+    padding: 5px 10px;
 }
 
 .carousel-caption.prod-list {
@@ -144,7 +144,10 @@ video {
 .navbar-nav .dropdown-item:hover {
     color: #088178;
 }
-
+.navbar-nav li.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+  
 .navbar-nav .dropdown-item::after {
     content: '';
     position: absolute;
@@ -256,141 +259,9 @@ video {
     background-color: rgba(230, 230, 230, 0.75);
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 50px;
-    height: 50px;
-    background-size: 100%, 100%;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.color-tile {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
-
-.color-white {
-    background-color: white;
-}
-
-.color-lightgray {
-    background-color: lightgray;
-}
-
-.color-darkgray {
-    background-color: darkgray;
-}
-
-.color-pink {
-    background-color: pink;
-}
-
-.color-red {
-    background-color: red;
-}
-
-.color-orange {
-    background-color: orange;
-}
-
-.color-beige {
-    background-color: beige;
-}
-
-.color-brown {
-    background-color: brown;
-}
-
-.color-yellow {
-    background-color: yellow;
-}
-
-.color-green {
-    background-color: green;
-}
-
-.color-blue {
-    background-color: blue;
-}
-
-.color-purple {
-    background-color: purple;
-}
-
-.poly-prod {
-    text-align: center;
-}
-
-/* Styling for accordion buttons */
-.accordion-button {
-    background-color: #ffffff;
-    /* White background for buttons */
-    color: #333;
-    /* Dark grey text */
-    font-size: 1rem;
-    /* Medium font size */
-    font-weight: bold;
-    /* Bold font weight */
-    border: none;
-    /* Remove border */
-    box-shadow: none;
-    /* Remove box shadow */
-}
-
-/* Hover effects */
-.accordion-button:hover {
-    background-color: #dae0e5;
-    /* Light blue background on hover */
-}
-
-.accordion-item {
-    border-bottom: 1px solid black;
-}
-
-.accordion-button::after {
-    display: inline-block;
-    font-family: "FontAwesome";
-    font-size: 0.8rem;
-    color: #333;
-    transition: transform 0.3s;
-}
-
-/* Rotate arrow when accordion is open */
-.accordion-button:not(.collapsed)::after {
-    transform: rotate(180deg);
-}
-
-/* Styling for the list inside the accordion body */
-.accordion-body ul {
-    padding: 0;
-    list-style: none;
-    /* Remove default list styling */
-}
-
-.accordion-body ul li a {
-    display: block;
-    padding: 0.5rem;
-    text-decoration: none;
-    /* No underline */
-    color: #333;
-    /* Dark grey text */
-    transition: background-color 0.3s;
-    /* Smooth transition for background color */
-}
-
-/* Hover effect for list items */
-.accordion-body ul li a:hover {
-    background-color: #e7f1ff;
-    /* Very light blue background on hover */
-}
 
 /* sản phẩm */
 .card {
-    width: 280px;
     border: 1px solid #ebebeb;
     padding: 13px;
     margin-bottom: 30px;
@@ -468,7 +339,13 @@ input:checked~input::before {
     width: 40px;
     margin-top: 10px;
 }
-
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 .card img {
     width: 100%;
     /* border-radius: 25px; */
@@ -496,17 +373,85 @@ input:checked~input::before {
     padding: 5px;
     border-radius: 50%;
 }
-.cart-icon:hover {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    color: rgb(201, 35, 35);
-    background: rgba(255, 255, 255, 0.7);
-    padding: 5px;
-    border-radius: 50%;
+.order-summary {
+    background-color: #f8f9fa;
+    border-left: 5px solid red; /* Blue border for emphasis */
+    padding: 20px;
+    border-radius: 5px;
 }
-.navbar-nav li.nav-item.dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-  
+.order-total {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* list product slider */
+.list-wrapper {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers the items vertically */
+}
+#prev, #next {
+    width: 50px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+#prev::before {
+    content: '<'; /* Adds content before the 'prev' button */
+    font-size: 3.5rem;
+    color: #cccccc; /* Light gray color for the arrow */
+    user-select: none;
+}
+
+#next::before {
+    content: '>';
+    font-size: 3.5rem;
+    color: #cccccc; /* Light gray color for the arrow */
+    user-select: none;
+}
+
+.item{
+    border-radius: 15px;
+    width:300px;
+    height:500px;
+    background-image: linear-gradient(to top, #AEC0CE, #ECECF2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin:10px;
+    scroll-snap-align: start;
+}
+#list{
+    display: flex;
+    width:max-content;
+}
+#formList{
+    width:1280px;
+    max-width: 100%;
+    overflow: auto;
+    margin:50px auto 50px;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+#formList::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-width: 1024px){
+    .item{
+        width: calc(33.3vw - 20px);
+    }
+    .direction{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+    .item{
+        width: calc(50vw - 20px);
+    }
+    .direction{
+        display: none;
+    }
+}
