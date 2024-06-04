@@ -40,7 +40,15 @@ $routeProvider
 })
 
 .controller('myctrl',function($scope,$http){
-   
+    $scope.products=[]  ;
+    $http.get('data.json?').
+    then(function(res){//thành công
+        console.log(res);
+        $scope.products=res.data;
+    },
+    function(res){//thất bại
+       alert('Lỗi không tải được dữ liệu');
+    });
 })    
 .controller('listproductctrl',function($scope,$http){
     $scope.products=[]  ;
@@ -56,23 +64,18 @@ $routeProvider
 })    
 
 .controller('detailctrl', function($scope, $routeParams) {
-    // $scope.id = $routeParams.id;
 
-    // var dsSP = $scope.$parent.dsSP || [];
+    $scope.id = $routeParams.id;
 
-    // var sp = dsSP.find(sp => sp.id == $scope.id);
+    var products = $scope.products || [];
 
-    // if (sp) {
-    //     $scope.sp = sp;
-    // } else {
-    //     console.error('Product not found');
-    // }
+    var item = products.find(item => item.id == $scope.id);
 
-    // for(let i=0;i<$scope.dsSP.length;i++){
-    //     if($scope.dsSP[i].id==$scope.id){
-    //         $scope.sp=$scope.dsSP[i];
-    //     }   
-    // }
+    if (item) {
+        $scope.item = item;
+    } else {
+        console.error('Product not found');
+    }
 })
 .controller('homectrl',function(){
 

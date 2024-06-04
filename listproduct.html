@@ -318,8 +318,8 @@
                     <div class="col-lg-4 col-md-6 poly-prod" ng-repeat="item in products">
                         <div class="card">
                             <div class="image-container">
-                                <img ng-src="{{item.img}}" class="card-img-top img-thumbnail" alt="product image">
-                                <a href="#" class="cart-icon"><i class="fa-solid fa-heart-circle-plus"></i></a>
+                                <a href="#!detail/{{item.id}}" ><img ng-src="{{item.img}}" class="card-img-top img-thumbnail" alt="product image"></a>
+                                <a href="#!detail/{{item.id}}"  class="cart-icon"><i class="fa-solid fa-heart-circle-plus"></i></a>
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center">
