@@ -26,7 +26,7 @@ $routeProvider
     templateUrl:'cart.html?'+ Math.random(),
     controller:'cartctrl'
 })
-.when('/wishlist',{
+.when('/wishlist/:id',{
     templateUrl:'wishlist.html?'+ Math.random(),
     controller:'wishlistctrl'
 })
@@ -76,12 +76,42 @@ $routeProvider
     } else {
         console.error('Product not found');
     }
+    $scope.currentIndex = 0;
+    
+    
+    $scope.showCarousel = function(index) { 
+    
+        $scope.currentIndex = index;
+    };
+
 })
 .controller('homectrl',function(){
 
 })
 .controller('aboutctrl',function(){
 
+})
+.controller('wishlistctrl',function($scope, $routeParams, $rootScope){
+    if (!$rootScope.wishlist) {
+        $rootScope.wishlist = [];
+    }
+    $scope.id = $routeParams.id;
+
+    var item = $scope.products.find(item => item.id == $scope.id);
+    if (item) {
+        $scope.sp = item;
+        if (!$rootScope.wishlist.find(sp => sp.id == item.id)) {
+            $rootScope.wishlist.push( $scope.sp);
+        }
+    } else {
+        console.error('Product not found');
+    }
+
+    $scope.wishlist = $rootScope.wishlist;
+    $scope.delete = function (index) {
+        $rootScope.index = index;
+        $rootScope.dsST.splice(index, 1);
+    };
 })
 .controller('contactctrl',function(){
     

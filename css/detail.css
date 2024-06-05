@@ -486,4 +486,12 @@ input:checked~input::before {
 .navbar-nav li.nav-item.dropdown:hover > .dropdown-menu {
     display: block;
   }
+  .bg-warning {
+    --bs-bg-opacity: 1;
+    background-color: #f8f9fa !important;
+}
+.text-dark {
+    --bs-text-opacity: 1;
+    color: #ffc107 !important;
+}
   
