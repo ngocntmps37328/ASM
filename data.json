@@ -33,19 +33,23 @@
             }
         ],
         "colors": [
-            {
+            {   "Name":  "XANH LÁ MẠ",
                 "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
             },
-            {
+            {   
+                "Name":  "ĐÀ",
                 "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
             },
-            {
+            {   
+                "Name":  "ĐEN",
                 "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
             },
-            {
+            {   
+                "Name":  "TRẮNG",
                 "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
             },
-            {
+            {   
+                "Name":  "TÍM",
                 "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
             }
         ]
@@ -80,10 +84,10 @@
             }          
         ],
         "colors": [
-            {
+            {   "Name":  "XANH ĐẬM",
                 "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/467363/chip/goods_01_467363_chip.jpg"
             },
-            {
+            {   "Name":  "TRẮNG",
                 "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/467363/chip/goods_69_467363_chip.jpg"
             }
         ]
@@ -122,21 +126,25 @@
             }
         ],
         "colors": [
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
-            }
+            {   "Name":  "XANH LÁ MẠ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐÀ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐEN",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TRẮNG",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TÍM",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
+        }
         ]
     },
     {
@@ -173,21 +181,25 @@
             }
         ],
         "colors": [
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
-            }
+            {   "Name":  "XANH LÁ MẠ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐÀ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐEN",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TRẮNG",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TÍM",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
+        }
         ]
     },
     {
@@ -224,21 +236,25 @@
             }
         ],
         "colors": [
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
-            }
+            {   "Name":  "XANH LÁ MẠ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐÀ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐEN",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TRẮNG",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TÍM",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
+        }
         ]
     },
     {
@@ -275,21 +291,25 @@
             }
         ],
         "colors": [
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
-            }
+            {   "Name":  "XANH LÁ MẠ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐÀ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐEN",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TRẮNG",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TÍM",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
+        }
         ]
     },
     {
@@ -326,21 +346,25 @@
             }
         ],
         "colors": [
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
-            },
-            {
-                "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
-            }
+            {"Name":  "XANH LÁ MẠ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_50_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐÀ",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_36_468584_chip.jpg"
+        },
+        {   
+            "Name":  "ĐEN",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_09_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TRẮNG",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_00_468584_chip.jpg"
+        },
+        {   
+            "Name":  "TÍM",
+            "thumb": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/468584/chip/goods_73_468584_chip.jpg"
+        }
         ]
     }
 ]
