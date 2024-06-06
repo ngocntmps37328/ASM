@@ -17,14 +17,14 @@
                 <h3 class="signup">ĐĂNG NHẬP</h3>
                 <div class="button"><a href="#"><i class="fas fa-times fa-2x" style="color:white;"></i></a></div>
             </div>
-            <form action="#" class="needs-validation" novalidate>
+            <form ng-submit="signin()" class="needs-validation" novalidate>
                 <div class="mb-3 row">
                     <div class="col-sm-2">
                         <label for="email" class="form-label">Email</label>
                     </div>
                     <div class="col-sm-10 input-group">
                         <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                        <input id="email" class="form-control" type="email" name="email" required pattern="^\S+@\S+\.\S+$">
+                        <input id="email" class="form-control" type="email" ng-model="email" required pattern="^\S+@\S+\.\S+$">
                         <div class="valid-feedback">
                             Email hợp lệ.
                         </div>
@@ -35,12 +35,11 @@
                 </div>
                 <div class="mb-3 row">
                     <div class="col-sm-2">
-                        <label for="password-input" class="form-label">Password</label>
+                        <label for="password" class="form-label">Password</label>
                     </div>
                     <div class="col-sm-10 input-group">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        <input id="password-input" class="form-control" type="password" name="password" required
-                            pattern="^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&?]).*$">
+                        <input id="password" class="form-control" type="password" ng-model="password" required>
                         <div class="valid-feedback">
                             Mật khẩu hợp lệ.
                         </div>

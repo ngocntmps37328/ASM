@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "userName": "MinhNgoc",
+        "password": "123456789",
+        "fullName": "Nguyễn Minh Ngọc",
+        "email": "MinhNgoc@gmail.com",
+        "phone": "0123456789",
+        "address": "Phú Quốc"
+    }
+]
