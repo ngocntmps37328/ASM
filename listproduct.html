@@ -46,11 +46,11 @@
                             SẮP XẾP THEO
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Tiêu biểu</a></li>
-                            <li><a class="dropdown-item" href="#">Hàng mới về</a></li>
-                            <li><a class="dropdown-item" href="#">Từ thấp đến cao</a></li>
-                            <li><a class="dropdown-item" href="#">Từ cao đến thấp</a></li>
-                            <li><a class="dropdown-item" href="#">Xếp hạng cao nhất</a></li>
+                            <li><button class="dropdown-item" type="button">Tiêu biểu</button></li>
+                            <li><button class="dropdown-item" type="button" ng-click="sortBy='-id'" ng-class="{'active': sortBy === '-id'}">Hàng mới về</button></li>
+                            <li><button class="dropdown-item" type="button" ng-click="sortBy='price'" ng-class="{'active': sortBy === 'price'}">Từ thấp đến cao</button></li>
+                            <li><button class="dropdown-item" type="button" ng-click="sortBy='-price'" ng-class="{'active': sortBy === '-price'}">Từ cao đến thấp</button></li>
+                            <li><button class="dropdown-item" type="button">Xếp hạng cao nhất</button></li>
                         </ul>
                     </div>
                 </div>
@@ -220,11 +220,11 @@
                             aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <ul>
-                                    <li><a href="#">199.000 VND - 299.000 VND</a></li>
-                                    <li><a href="#">299.000 VND - 399.000 VND</a></li>
-                                    <li><a href="#">399.000 VND - 499.000 VND</a></li>
-                                    <li><a href="#">499.000 VND - 799.000 VND</a></li>
-                                    <li><a href="#">799.000 VND - 999.000 VND</a></li>
+                                    <li><button class="dropdown-item  btnprice p-3" ng-click="filterByPrice(199000, 299000)" ng-class="{'active': selectedPriceRange.min === 199000 && selectedPriceRange.max === 299000}">199.000 VND - 299.000 VND</button></li>
+                                    <li><button class="dropdown-item  btnprice p-3" ng-click="filterByPrice(299000, 399000)" ng-class="{'active': selectedPriceRange.min === 299000 && selectedPriceRange.max === 399000}">299.000 VND - 399.000 VND</button></li>
+                                    <li><button class="dropdown-item  btnprice p-3" ng-click="filterByPrice(399000, 499000)" ng-class="{'active': selectedPriceRange.min === 399000 && selectedPriceRange.max === 499000}">399.000 VND - 499.000 VND</button></li>
+                                    <li><button class="dropdown-item  btnprice p-3" ng-click="filterByPrice(499000, 799000)" ng-class="{'active': selectedPriceRange.min === 499000 && selectedPriceRange.max === 799000}">499.000 VND - 799.000 VND</button></li>
+                                    <li><button class="dropdown-item  btnprice p-3" ng-click="filterByPrice(799000, 999000)" ng-class="{'active': selectedPriceRange.min === 799000 && selectedPriceRange.max === 999000}">799.000 VND - 999.000 VND</button></li>
                                 </ul>
                             </div>
                         </div>
@@ -315,11 +315,11 @@
             <div class="col-sm-9">
                 <!-- done -->
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 poly-prod" ng-repeat="item in products">
+                    <div class="col-lg-4 col-md-6 poly-prod" ng-repeat="item in products | searchProduct:keyword:['price','name']| filterPrice:minPrice:maxPrice | orderBy:sortBy">
                         <div class="card">
                             <div class="image-container">
                                 <a href="#!detail/{{item.id}}" ><img ng-src="{{item.img}}" class="card-img-top img-thumbnail" alt="product image"></a>
-                                <a href="#!wishlist/{{item.id}}"  class="cart-icon"><i class="fa-solid fa-heart-circle-plus"></i></a>
+                                <a href="#!wishlist/{{item.id}}"   class="cart-icon" ng-class="{'active': isInWishlist(item.id)}"><i class="fa-solid fa-heart-circle-plus"></i></a>
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center">

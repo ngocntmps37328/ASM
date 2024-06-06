@@ -494,4 +494,6 @@ input:checked~input::before {
     --bs-text-opacity: 1;
     color: #ffc107 !important;
 }
-  
+.pick-color.active{
+    border:3px solid #4129dd;
+}

@@ -104,44 +104,67 @@
                             <p style="padding-top:10px;width: 60px;height:40px;">(104)</p>
                         </div>
                     </div>
-        
+
                     <hr>
-        
-                    <h5>MÀU SẮC: 61 BLUE</h5>
+
+                    <h5>MÀU SẮC: {{item.colors[colorindex].Name}}</h5>
                     <div class="mb-3 mt-3">
-                        <div class="color-option" style="background-color: #ffffff;"></div>
-                        <div class="color-option" style="background-color: #000000;"></div>
-                        <div class="color-option" style="background-color: #D5B1B8;"></div>
-                        <div class="color-option" style="background-color: #663300;"></div>
-                        <div class="color-option selected" style="background-color: #61B5D9;"></div>
+                        <div class="col-12">
+                            <fieldset>
+                                <img class="img-thumbnail pick-color {{(0 == colorindex)?'active':''}}"
+                                    ng-src="{{item.colors[0].thumb}}" ng-click="changeColorname(0)" alt="">
+                                <img class="img-thumbnail pick-color {{(1 == colorindex)?'active':''}}"
+                                    ng-src="{{item.colors[1].thumb}}" ng-click="changeColorname(1)" alt="">
+                                <img class="img-thumbnail pick-color {{(2 == colorindex)?'active':''}}"
+                                    ng-src="{{item.colors[2].thumb}}" ng-click="changeColorname(2)" alt="">
+                                <img class="img-thumbnail pick-color {{(3 == colorindex)?'active':''}}"
+                                    ng-src="{{item.colors[3].thumb}}" ng-click="changeColorname(3)" alt="">
+                                <img class="img-thumbnail pick-color {{(4 == colorindex)?'active':''}}"
+                                    ng-src="{{item.colors[4].thumb}}" ng-click="changeColorname(4)" alt="">
+                            </fieldset>
+                        </div>
                     </div>
-        
-                    <h5>KÍCH CỠ: NỮ S</h5>
+
+                    <h5>KÍCH CỠ: {{item.size}}</h5>
                     <div class="mb-3 mt-3">
-                        <button type="button" class="size-option btn btn-outline-primary" style="width:50px">XS</button>
-                        <button type="button" class="size-option btn btn-outline-primary active" style="width:50px">S</button>
-                        <button type="button" class="size-option btn btn-outline-primary" style="width:50px">M</button>
-                        <button type="button" class="size-option btn btn-outline-primary" style="width:50px">L</button>
-                        <button type="button" class="size-option btn btn-outline-primary" style="width:50px">XL</button>
-                        <button type="button" class="size-option btn btn-outline-primary" style="width:60px">XXL</button>
+                        <button type="button"
+                            class="size-option btn btn-outline-primary {{('XS' == item.size)?'active':''}}"
+                            style="width:50px" ng-click="item.size='XS'">XS</button>
+                        <button type="button"
+                            class="size-option btn btn-outline-primary {{('S' == item.size)?'active':''}}"
+                            style="width:50px" ng-click="item.size='S'">S</button>
+                        <button type="button"
+                            class="size-option btn btn-outline-primary {{('M' == item.size)?'active':''}}"
+                            style="width:50px" ng-click="item.size='M'">M</button>
+                        <button type="button"
+                            class="size-option btn btn-outline-primary {{('L' == item.size)?'active':''}}"
+                            style="width:50px" ng-click="item.size='L'">L</button>
+                        <button type="button"
+                            class="size-option btn btn-outline-primary {{('XL' == item.size)?'active':''}}"
+                            style="width:50px" ng-click="item.size='XL'">XL</button>
+                        <button type="button"
+                            class="size-option btn btn-outline-primary {{('XXL' == item.size)?'active':''}}"
+                            style="width:60px" ng-click="item.size='XXL'">XXL</button>
                     </div>
-        
+
                     <div class="mb-3" style="width:100px;">
                         <h6 for="quantity" class="form-label">SỐ LƯỢNG</h6>
-                        <select class="form-select" id="quantity">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select class="form-select" id="quantity" ng-model="selectedQuantity"
+                            ng-change="updateQuantity(cartItem)">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                     <div>
                         <div class="d-grid gap-2">
-                            <button class="btn p-2" style="background-color: red;color:aliceblue;" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">THÊM VÀO GIỎ HÀNG</button>
+                            <button class="btn p-2" style="background-color: red;color:aliceblue;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal"> <a href="#!detail/{{item.id}}"
+                                    style="text-decoration: none;color:white"> THÊM VÀO GIỎ HÀNG</a></button>
                         </div>
-        
+
                         <div class="row">
                             <div class="col-sm-6 mt-3">
                                 <button type="button" class="btn btn-outline-dark" style="width:200px;height:80px;">THÊM
@@ -600,93 +623,44 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        ng-controller="modalCtrl">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"> 1 SẢN PHẨM ĐÃ ĐƯỢC THÊM VÀO GIỎ HÀNG CỦA BẠN
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">1 SẢN PHẨM ĐÃ ĐƯỢC THÊM VÀO GIỎ HÀNG CỦA BẠN
                     </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <div class="row">
+                        <div class="row" ng-repeat="cartItem in cart" style="border:0.5px solid black; padding:10px">
+                            <a href="#" style="margin-left:710px" ng-click="delete($index, $event)"> <i
+                                class="fa-solid fa-x" style="color:black"></i></a>
                             <div class="col-md-3">
-                                <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465601/item/vngoods_01_465601.jpg"
-                                    class="img-thumbnail" alt="...">
+                                <img ng-src="{{cartItem.img}}" class="img-thumbnail" alt="...">
                             </div>
                             <div class="col-md-9">
                                 <div class="card-body">
-                                    <h4 class="card-title text-bold">Áo Polo AIRism Cotton</h4>
-                                    <p class="card-text" style="margin-bottom:0px ;"><small class="text-muted">Mã sản
-                                            phẩm: 455365</small></p>
-                                    <p class="card-text" style="margin-bottom:0px ;">Màu sắc: White</p>
-                                    <p class="card-text" style="margin-bottom:0px ;">Kích cỡ: Nữ S</p>
-                                    <p class="card-text" style="color:red;margin-bottom:0px ;">489.000 VND</p>
+                                    <h4 class="card-title text-bold">{{cartItem.name}}</h4>
+                                    <p class="card-text" style="margin-bottom:0px;"><small class="text-muted">Mã sản
+                                            phẩm: 4363647</small></p>
+                                    <p class="card-text" style="margin-bottom:0px;">Màu sắc: {{cartItem.color}}</p>
+                                    <p class="card-text" style="margin-bottom:0px;">Kích cỡ: {{cartItem.size}}</p>
+                                    <p class="card-text" style="color:red;margin-bottom:0px;">{{cartItem.price |
+                                        number:0}} VND</p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                        <div class="btn-group quantity-controls" role="group"
+                                            aria-label="Basic example">
                                             <button type="button" class="btn btn-outline-secondary btn-sm"
-                                                onclick="decrementValue(this)">-</button>
-                                            <input type="text" class="form-control form-control-sm" value="1"
-                                                style="max-width: 40px;">
+                                                ng-click="decrementQuantity(cartItem)">-</button>
+                                            <input type="text" class="form-control form-control-sm"
+                                                ng-model="cartItem.quantity" style="max-width: 40px;" readonly>
                                             <button type="button" class="btn btn-outline-secondary btn-sm"
-                                                onclick="incrementValue(this)">+</button>
+                                                ng-click="incrementQuantity(cartItem)">+</button>
                                         </div>
-                                        <h5 class="ms-auto" style="color:red">Tổng: 489.000 VND</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465601/item/vngoods_01_465601.jpg"
-                                    class="img-thumbnail" alt="...">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body">
-                                    <h4 class="card-title text-bold">Áo Polo AIRism Cotton</h4>
-                                    <p class="card-text" style="margin-bottom:0px ;"><small class="text-muted">Mã sản
-                                            phẩm: 455365</small></p>
-                                    <p class="card-text" style="margin-bottom:0px ;">Màu sắc: White</p>
-                                    <p class="card-text" style="margin-bottom:0px ;">Kích cỡ: Nữ S</p>
-                                    <p class="card-text" style="color:red;margin-bottom:0px ;">489.000 VND</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-outline-secondary btn-sm"
-                                                onclick="decrementValue(this)">-</button>
-                                            <input type="text" class="form-control form-control-sm" value="1"
-                                                style="max-width: 40px;">
-                                            <button type="button" class="btn btn-outline-secondary btn-sm"
-                                                onclick="incrementValue(this)">+</button>
-                                        </div>
-                                        <h5 class="ms-auto" style="color:red">Tổng: 489.000 VND</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465601/item/vngoods_01_465601.jpg"
-                                    class="img-thumbnail" alt="...">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body">
-                                    <h4 class="card-title text-bold">Áo Polo AIRism Cotton</h4>
-                                    <p class="card-text" style="margin-bottom:0px ;"><small class="text-muted">Mã sản
-                                            phẩm: 455365</small></p>
-                                    <p class="card-text" style="margin-bottom:0px ;">Màu sắc: White</p>
-                                    <p class="card-text" style="margin-bottom:0px ;">Kích cỡ: Nữ S</p>
-                                    <p class="card-text" style="color:red;margin-bottom:0px ;">489.000 VND</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-outline-secondary btn-sm"
-                                                onclick="decrementValue(this)">-</button>
-                                            <input type="text" class="form-control form-control-sm" value="1"
-                                                style="max-width: 40px;">
-                                            <button type="button" class="btn btn-outline-secondary btn-sm"
-                                                onclick="incrementValue(this)">+</button>
-                                        </div>
-                                        <h5 class="ms-auto" style="color:red">Tổng: 489.000 VND</h5>
+                                        <h5 class="ms-auto" style="color:red">Tổng: {{cartItem.price * cartItem.quantity
+                                            | number:0}} VND</h5>
                                     </div>
                                 </div>
                             </div>
@@ -694,10 +668,10 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-sm-6" style="text-align: left;">
-                            <h4>Tổng: 3 sản phẩm</h4>
+                            <h4>Tổng: {{cart.length}} sản phẩm</h4>
                         </div>
                         <div class="col-sm-6" style="text-align: right;">
-                            <h4>2.445.000 VND</h4>
+                            <h4>{{getTotalPrice() | number:0}} VND</h4>
                         </div>
                     </div>
                 </div>
@@ -705,19 +679,19 @@
                 <div class="modal-footer">
                     <div class="row">
                         <div class="col-sm-6 mt-3">
-                            <button type="button" class="btn btn-outline-dark" style="width:200px;height:40px;">XEM GIỎ
-                                HÀNG</button>
+                            <a  href="#!cart" style="text-decoration:none;"><button type="button" class="btn btn-outline-dark" style="width:200px;height:40px;">
+                                   XEM GIỎ HÀNG</button></a>
                         </div>
                         <div class="col-sm-6 mt-3">
-                            <button type="button" class="btn btn-outline-dark" style="width:200px;height:40px;">TIẾP TỤC
-                                MUA SẮM</button>
+                            <a href="#!listproduct" style="text-decoration: none;"><button type="button" class="btn btn-outline-dark" style="width:200px;height:40px;"
+                                data-bs-dismiss="modal">TIẾP TỤC MUA SẮM</button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
     <footer class="footer">
         <div class="container-fluid">
             <div class="row" style="padding-bottom:40px;">

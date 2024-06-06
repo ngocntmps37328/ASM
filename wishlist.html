@@ -10,16 +10,14 @@
     <link rel="stylesheet" href="css/wishlist.css">
 </head>
 
-<body>
+<body ng-app="wishlistApp" ng-controller="wishlistctrl">
 
     <!-- breadcrumb -->
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a style="color:rgb(33, 37, 41,0.75);" href="#" aria-current="page"
-                        aria-label="Trang chủ UNIQLO">Trang chủ UNIQLO</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><span class=""
-                        style="color: rgb(117, 117, 117);">Yêu thích</span></li>
+                <li class="breadcrumb-item"><a style="color:rgb(33, 37, 41,0.75);" href="#" aria-current="page" aria-label="Trang chủ UNIQLO">Trang chủ UNIQLO</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><span style="color: rgb(117, 117, 117);">Yêu thích</span></li>
             </ol>
         </nav>
     </div>
@@ -31,19 +29,17 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card mb-3" ng-repeat="sp in wishlist">
-                    <a href="#" class="position-absolute top-0 end-0 btn btn-light btn-sm m-2" ng-click="delete()"><i
-                            class="fa-solid fa-x"></i></a>
+                    <a href="javascript:void(0)" class="position-absolute top-0 end-0 btn btn-light btn-sm m-2" ng-click="delete($index, $event)"><i class="fa-solid fa-x"></i></a>
                     <div class="row g-0">
                         <div class="col-md-2">
-                            <img  ng-src="{{sp.img}}"
-                                class="img-thumbnail" alt="...">
+                            <img ng-src="{{sp.img}}" class="img-thumbnail" alt="...">
                         </div>
                         <div class="col-md-10">
                             <div class="card-body" style="margin-left: 20px;">
                                 <h4 class="card-title text-bold">{{sp.name}}</h4>
-                                <p class="card-text"><small class="text-muted">Mã sản phẩm: 455375</small></p>
-                                <p class="card-text">Màu sắc: Xanh</p>
-                                <p class="card-text">Kích cỡ: Nữ S</p>
+                                <p class="card-text"><small class="text-muted">Mã sản phẩm: {{sp.code}}</small></p>
+                                <p class="card-text">Màu sắc: {{sp.color}}</p>
+                                <p class="card-text">Kích cỡ: {{sp.size}}</p>
                                 <p class="card-text mt-2" style="color:red">{{sp.price}} VND</p>
                             </div>
                         </div>
@@ -55,6 +51,7 @@
 
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/896df3cdf4.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

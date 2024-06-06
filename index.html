@@ -121,7 +121,7 @@
                     </ul>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search" ng-model="keyword" ng-model-options="{debounce:'blur'}">
                             <button class="btn btn-outline" type="submit" title="Tìm kiếm">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
@@ -153,7 +153,7 @@
             <i class="fa-solid fa-fan fa-spin fa-spin-reverse"></i>Đang tải trang...
           </div>
         <ng-view>
-            <div class="container">
+        <div class="container">
                 <ng-view></ng-view>   
             <!-- carousel video -->
             <div id="carouselVideoExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
