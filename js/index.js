@@ -124,8 +124,6 @@ angular.module('myapp', ["ngRoute"])
             console.error("Product not found");
         }
         $scope.currentIndex = 0;
-
-
         $scope.showCarousel = function (index) {
 
             $scope.currentIndex = index;

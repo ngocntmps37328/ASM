@@ -37,44 +37,44 @@
                         <div class="col-md-3">
                             <!-- Thumbnails -->
                             <div>
-                                <img ng-src="{{item.images[0].thumb}}"
+                                <img ng-src="{{item.images[0].thumb}}" ng-click="showCarousel(0)"
                                     class="img-thumbnail choose-prod">
-                                <img ng-src="{{item.images[1].thumb}}"
+                                <img ng-src="{{item.images[1].thumb}}" ng-click="showCarousel(1)"
                                     class="img-thumbnail choose-prod">
-                                <img ng-src="{{item.images[2].thumb}}"
+                                <img ng-src="{{item.images[2].thumb}}"ng-click="showCarousel(2)"
                                     class="img-thumbnail choose-prod">
-                                <img ng-src="{{item.images[3].thumb}}"
+                                <img ng-src="{{item.images[3].thumb}}"ng-click="showCarousel(3)"
                                     class="img-thumbnail choose-prod">
-                                <img ng-src="{{item.images[4].thumb}}"
+                                <img ng-src="{{item.images[4].thumb}}"ng-click="showCarousel(4)"
                                     class="img-thumbnail choose-prod">
-                                <img ng-src="{{item.images[5].thumb}}"
+                                <img ng-src="{{item.images[5].thumb}}" ng-click="showCarousel(5)"
                                     class="img-thumbnail choose-prod">
                             </div>
                         </div>
                         <div class="col-md-9">
                             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active">
+                                    <div class="carousel-item {{(0 ==currentIndex)?'active':''}}">
                                         <img ng-src="{{item.images[0].large}}"
                                             class="d-block w-100" alt="...">
                                     </div>
-                                    <div class="carousel-item">
+                                    <div class="carousel-item {{(1 ==currentIndex)?'active':''}}">
                                         <img ng-src="{{item.images[1].large}}"
                                             class="d-block w-100" alt="...">
                                     </div>
-                                    <div class="carousel-item">
+                                    <div class="carousel-item {{(2 ==currentIndex)?'active':''}}">
                                         <img ng-src="{{item.images[2].large}}"
                                             class="d-block w-100" alt="...">
                                     </div>
-                                    <div class="carousel-item">
+                                    <div class="carousel-item {{(3 ==currentIndex)?'active':''}}">
                                         <img ng-src="{{item.images[3].large}}"
                                             class="d-block w-100" alt="...">
                                     </div>
-                                    <div class="carousel-item">
+                                    <div class="carousel-item {{(4 ==currentIndex)?'active':''}}">
                                         <img ng-src="{{item.images[4].large}}"
                                             class="d-block w-100" alt="...">
                                     </div>
-                                    <div class="carousel-item">
+                                    <div class="carousel-item {{(5 ==currentIndex)?'active':''}}">
                                         <img ng-src="{{item.images[5].large}}"
                                             class="d-block w-100" alt="...">
                                     </div>
