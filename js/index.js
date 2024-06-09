@@ -403,12 +403,13 @@ angular
             } else {
               users.push($scope.newUser);
               console.log("New user added:", $scope.newUser);
-
+              console.log("Updated users:", users);
               alert("Đăng ký thành công");
-              window.location.href = "#/signin";
+              window.location.href = "#!/signin";
             }
           },
           function (res) {
+            
           }
         );
       } else {
