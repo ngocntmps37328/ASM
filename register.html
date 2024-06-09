@@ -1,138 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ĐĂNG KÝ | UNIQLO VN</title>
+    <title>ĐĂNG KÝ | UNIQLO VN</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/uniqlo-logo-BDEC351EFB-seeklogo.com.png">
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/register.css">
 </head>
 
-<body>
-    <div class="container">
-        <div class="card card-custom">
-            <div class="card-header card-header-custom">
-                <h3 class="signup">ĐĂNG KÝ</h3>
-                <div class="button"><a href="#"><i class="fas fa-times fa-2x" style="color:white;"></i></a></div>
-            </div>
-            <form action="#" class="needs-validation" novalidate>
-                <div class="mb-3">
-                    <label for="birthday" class="form-label">Ngày sinh của bạn là ?</label>
-                    <div class="row g-2">
-                        <div class="col-md-4"><input type="number" class="form-control" placeholder="Ngày" required min="1" max="31"></div>
-                        <div class="col-md-4"><input type="number" class="form-control" placeholder="Tháng" required min="1" max="12">
-                        </div>
-                        <div class="col-md-4"><input type="number" class="form-control" placeholder="Năm" required min="1900" max="2099"></div>
-                    </div>
-                    <label class="form-text" style="color:white;margin-top:10px;">Không thể chỉnh sửa ngày sinh sau khi đăng ký tài
-                        khoản.</label>
-                </div>
-                <div class="mb-3 row">
-                    <div class="col-sm-2">
-                        <label for="email" class="form-label">Email</label>
-                    </div>
-                    <div class="col-sm-10 input-group">
-                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                        <input id="email" class="form-control" type="email" name="email" required pattern="^\S+@\S+\.\S+$">
-                        <div class="valid-feedback">
-                            Email hợp lệ.
-                        </div>
-                        <div class="invalid-feedback">
-                            Email không hợp lệ.
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <div class="col-sm-2">
-                        <label for="password-input" class="form-label">Password</label>
-                    </div>
-                    <div class="col-sm-10 input-group">
-                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        <input id="password-input" class="form-control" type="password" name="password" required
-                            pattern="^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&?]).*$">
-                        <div class="valid-feedback">
-                            Mật khẩu hợp lệ.
-                        </div>
-                        <div class="invalid-feedback">
-                            Mật khẩu không hợp lệ.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 row">
-                    <label class="form-label">Điều khoản sử dụng </label>
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    Ứng dụng UNIQLO và tài khoản cá nhân của bạn
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">UNIQLO cam kết tôn trọng các quyền của khách hàng khi lưu
-                                    trữ dữ liệu cá nhân của họ trong hệ thống. Thỏa thuận bên dưới sẽ giúp khách hàng
-                                    lựa chọn việc có để cho dữ liệu cá nhân của mình được lưu trữ và xử lý vì mục đích
-                                    cung cấp dịch vụ tương ứng. Vì mục đích của thỏa thuận bên dưới, sẽ gửi “tin nhắn
-                                    văn bản”, nghĩa là thông báo cung cấp những thông tin quan trọng liên quan đến dịch
-                                    vụ đến cho khách hàng.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                    Đồng ý nhận quảng cáo tiếp thị (Tin nhắn không cá nhân hóa)
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Tôi đồng ý cho phép Uniqlo sử dụng dữ liệu cá nhân của tôi
-                                    để gửi cho tôi tin nhắn tiếp thị theo dạng tin nhắn văn bản không cá nhân hóa</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    Đồng ý nhận quảng cáo tiếp thị (Tin nhắn cá nhân hóa)
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Tôi đồng ý cho phép Uniqlo phân tích và sử dụng dữ liệu của
-                                    tôi để gửi cho tôi tin nhắn tiếp thị theo dạng tin nhắn văn bản cá nhân hóa</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="trendingContent" required>
-                    <label class="form-check-label" for="trendingContent" style="color:white">Tôi đồng ý với điều khoản
-                        sử dụng và chính sách bảo mật của UNIQLO.</label>
-                </div>
-                <div class="mb-4">
-                    <button class="button-86 text-center" role="button"
-                     type="submit" style="font-size: 25px;">Đăng ký</button>
-                    <small class="form-text" style="color:white">Bằng cách tiếp tục, bạn đồng ý với điều khoản dịch vụ
-                        của UNIQLO và xác nhận rằng bạn đã đọc chính sách bảo mật của UNIQLO.</small>
-                </div>
-                <hr>
-                <div class="text-center" style="color:white">
-                    <p>Bạn đã có tài khoản? <a href="#" class="link-custom">Đăng nhập</a></p>
-                </div>
-            </form>
+<body ng-controller="signupController">
+<div class="container">
+    <div class="card card-custom">
+        <div class="card-header card-header-custom">
+            <h3 class="signup">ĐĂNG KÝ</h3>
+            <div class="button"><a href="#"><i class="fas fa-times fa-2x" style="color:white;"></i></a></div>
         </div>
+        <form name="signupForm" ng-submit="register(signupForm.$valid)" novalidate>
+            <div class="mb-3">
+                <label for="birthday" class="form-label">Ngày sinh của bạn là?</label>
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <input type="number" class="form-control" placeholder="Ngày" ng-model="birthday.day" name="day" required min="1" max="31">
+                        <div ng-show="signupForm.day.$touched && signupForm.day.$invalid" class="text-danger">
+                            <div ng-show="signupForm.day.$error.required">Ngày sinh không được để trống.</div>
+                            <div ng-show="signupForm.day.$error.min || signupForm.day.$error.max">Ngày sinh không hợp lệ.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="number" class="form-control" placeholder="Tháng" ng-model="birthday.month" name="month" required min="1" max="12">
+                        <div ng-show="signupForm.day.$touched && signupForm.day.$invalid" class="text-danger">
+                            <div ng-show="signupForm.month.$error.required">Tháng sinh không được để trống.</div>
+                            <div ng-show="signupForm.month.$error.min || signupForm.month.$error.max">Tháng sinh không hợp lệ.</div>
+                        </div>                    </div>
+                    <div class="col-md-4">
+                        <input type="number" class="form-control" placeholder="Năm" ng-model="birthday.year" name="year" required min="1900" max="2099">
+                        <div ng-show="signupForm.day.$touched && signupForm.day.$invalid" class="text-danger">
+                            <div ng-show="signupForm.year.$error.required">Năm sinh không được để trống.</div>
+                            <div ng-show="signupForm.year.$error.min || signupForm.year.$error.max">Năm sinh không hợp lệ.</div>
+                        </div>                    </div>
+                </div>
+                <label class="form-text" style="color:white;margin-top:10px;">Không thể chỉnh sửa ngày sinh sau khi đăng ký tài khoản.</label>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-sm-2">
+                    <label for="email" class="form-label">Email</label>
+                </div>
+                <div class="col-sm-10 input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input id="email" class="form-control" type="email" ng-model="newUser.email" name="email" required pattern="^\S+@\S+\.\S+$">
+                </div>
+                <div ng-show="signupForm.email.$touched && signupForm.email.$invalid" class="text-danger">
+                    <div ng-show="signupForm.email.$error.required">Email không được để trống.</div>
+                    <div ng-show="signupForm.email.$error.pattern">Email không hợp lệ.</div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-sm-2">
+                    <label for="password" class="form-label">Password</label>
+                </div>
+                <div class="col-sm-10 input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input id="password" class="form-control" type="password" ng-model="newUser.password" name="password" required pattern="^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%@&?]).*$">
+                </div>
+                <div ng-show="signupForm.password.$touched && signupForm.password.$invalid" class="text-danger">
+                    <div ng-show="signupForm.password.$error.required">Mật khẩu không được để trống.</div>
+                    <div ng-show="signupForm.password.$error.pattern">Mật khẩu phải chứa ít nhất 8 ký tự, bao gồm chữ cái, số và ký tự đặc biệt.</div>
+                </div>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="trendingContent" required>
+                <label class="form-check-label" for="trendingContent" style="color:white">Tôi đồng ý với điều khoản sử dụng và chính sách bảo mật của UNIQLO.</label>
+            </div>
+            <div class="mb-4">
+                <button class="button-86 text-center" role="button" type="submit" style="font-size: 25px;">Đăng ký</button>
+                <small class="form-text" style="color:white">Bằng cách tiếp tục, bạn đồng ý với điều khoản dịch vụ của UNIQLO và xác nhận rằng bạn đã đọc chính sách bảo mật của UNIQLO.</small>
+            </div>
+            <hr>
+            <div class="text-center" style="color:white">
+                <p>Bạn đã có tài khoản? <a href="#!signin" class="link-custom">Đăng nhập</a></p>
+            </div>
+        </form>
     </div>
-    <script src="js/register.js"></script>
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/896df3cdf4.js" crossorigin="anonymous"></script>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/896df3cdf4.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

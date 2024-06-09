@@ -43,6 +43,10 @@ angular.module('myapp', ["ngRoute"])
                 templateUrl: 'signin.html?' + Math.random(),
                 controller: 'signin'
             })
+            .when('/signup', {
+                templateUrl: 'register.html?' + Math.random(),
+                controller: 'signup'
+            })
             .otherwise({
                 template: '<h1>404 - NOT FOUND</h1>',
             })
@@ -278,7 +282,7 @@ angular.module('myapp', ["ngRoute"])
                 console.log($scope.email);  // Kiểm tra giá trị của email
                 console.log($scope.password);  // Kiểm tra giá trị của password
 
-                $http.get('user.json').then(function (res) {
+                $http.get('http://localhost:3000/users').then(function (res) {
                     const users = res.data;
                     console.log(users);
                     const user = users.find(u => u.email === $scope.email && u.password === $scope.password);
@@ -295,8 +299,53 @@ angular.module('myapp', ["ngRoute"])
                 });
         };
     })
+    .controller('signup', function($scope, $http) {
+        $scope.newUser = {
+        userName: "",
+        password: "",
+        fullName: "",
+        email: "",
+        phone: "",
+        address: "",
+        birthday: ""
+        };
 
+        $scope.birthday = {
+            day: "",
+            month: "",
+            year: ""
+        };
+        console.log($scope.newUser);
 
-    .controller('contactctrl', function () {
+        $scope.register = function(isValid) {
+            if (isValid && $scope.birthday.day && $scope.birthday.month && $scope.birthday.year) {
+
+                //convert yyyy/mm/dd
+                $scope.newUser.birthday = $scope.birthday.year.toString() + '/' +
+                    ($scope.birthday.month < 10 ? '0' : '') + $scope.birthday.month.toString() + '/' +
+                    ($scope.birthday.day < 10 ? '0' : '') + $scope.birthday.day.toString();
+
+                // Check if email already exists
+                $http.get('http://localhost:3000/users').then(function(res) {
+                    const users = res.data;
+                    const existingUser = users.find(u => u.email === $scope.newUser.email);
+
+                    if (existingUser) {
+                        alert("Email đã tồn tại. Vui lòng sử dụng email khác.");
+                    } else {
+                    $http.post('http://localhost:3000/users', $scope.newUser)
+                        .then(function(res) {
+                            alert("Đăng ký thành công");
+                            window.location.href = "#/signin";
+                        }, function(res) {
+                            alert('Lỗi không thể đăng ký');
+                        });
+                    }
+                }, function(res) {
+                });
+            } else {
+                alert("Vui lòng điền đầy đủ thông tin hợp lệ.");
+            }
+        };
 
     });

@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "userName": "MinhNgoc",
+      "password": "123456",
+      "fullName": "Nguyễn Minh Ngọc",
+      "email": "MinhNgoc@gmail.com",
+      "phone": "0123456789",
+      "address": "Phú Quốc",
+      "birthday": "1999/07/02"
+    },
+    {
+      "id": "0ffe",
+      "password": "MinhNgoc#123321",
+      "email": "MinhNgoc0207@gmail.com",
+      "birthday": "1999/07/02"
+    },
+    {
+      "id": "7692",
+      "userName": "",
+      "password": "MinhNgoc#123321",
+      "fullName": "",
+      "email": "MinhNgoc1234@gmail.com",
+      "phone": "",
+      "address": "",
+      "birthday": "1999/07/02"
+    },
+    {
+      "id": "7d02",
+      "userName": "",
+      "password": "MinhNgoc#123321",
+      "fullName": "",
+      "email": "MinhNgoc123@gmail.com",
+      "phone": "",
+      "address": "",
+      "birthday": "1999/07/02"
+    }
+  ]
+}
