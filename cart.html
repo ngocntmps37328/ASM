@@ -28,166 +28,96 @@
         <div class="row">
             <div class="col-md-8">
                 <!-- Product Box 1 -->
-                <div class="card mb-3 position-relative">
-                    <a href="#" class="position-absolute top-0 end-0 btn btn-light btn-sm m-2"><i
-                            class="fa-solid fa-x"></i></a>
+                <div class="card mb-3 position-relative" ng-repeat="cartItem in cart">
+                    <a href="#" class="position-absolute top-0 end-0 btn btn-light btn-sm m-2" ng-click="delete($index, $event)">
+                        <i class="fa-solid fa-x"></i>
+                    </a>
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/468625/item/vngoods_61_468625.jpg?width=750"
-                                class="img-thumbnail" alt="...">
+                            <img ng-src="{{cartItem.img}}" class="img-thumbnail" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h4 class="card-title text-bold">Áo Thun Cổ Thuyền</h4>
+                                <h4 class="card-title text-bold">{{cartItem.name}}</h4>
                                 <p class="card-text"><small class="text-muted">Mã sản phẩm: 455375</small></p>
-                                <p class="card-text">Màu sắc: Xanh</p>
-                                <p class="card-text">Kích cỡ: Nữ S</p>
-                                <p class="card-text" style="color:red">244.000 VND</p>
+                                <p class="card-text">Màu sắc: {{cartItem.color}}</p>
+                                <p class="card-text">Kích cỡ: {{cartItem.size}}</p>
+                                <p class="card-text" style="color:red">{{cartItem.price | number:0}} VND</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="decrementValue(this)">-</button>
-                                        <input type="text" class="form-control form-control-sm" value="1" style="max-width: 40px;">
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="incrementValue(this)">+</button>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm" ng-click="decrementQuantity(cartItem)">-</button>
+                                        <input type="text" class="form-control form-control-sm" value="{{cartItem.quantity}}" style="max-width: 40px;" ng-model="cartItem.quantity" readonly>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm" ng-click="incrementQuantity(cartItem)">+</button>
                                     </div>
-                                    
-                                    <p class="card-text m-4">
-                                    <h5 class="ms-auto" style="color:red">Tổng: 244.000 VND</h5>
-                                    </p>
+                                    <h5 class="ms-auto" style="color:red">Tổng: {{cartItem.price * cartItem.quantity | number:0}} VND</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3 position-relative">
-                    <a href="#" class="position-absolute top-0 end-0 btn btn-light btn-sm m-2"><i
-                            class="fa-solid fa-x"></i></a>
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465601/item/vngoods_01_465601.jpg?width=320"
-                                class="img-thumbnail" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title text-bold">Áo Polo AIRism Cotton</h4>
-                                <p class="card-text"><small class="text-muted">Mã sản phẩm: 455365</small></p>
-                                <p class="card-text">Màu sắc: White</p>
-                                <p class="card-text">Kích cỡ: Nữ S</p>
-                                <p class="card-text" style="color:red">244.000 VND</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="decrementValue(this)">-</button>
-                                        <input type="text" class="form-control form-control-sm" value="1" style="max-width: 40px;">
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="incrementValue(this)">+</button>
-                                    </div>
-                                    
-                                    <p class="card-text m-4">
-                                    <h5 class="ms-auto" style="color:red">Tổng: 244.000 VND</h5>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3 position-relative">
-                    <a href="#" class="position-absolute top-0 end-0 btn btn-light btn-sm m-2"><i
-                            class="fa-solid fa-x"></i></a>
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465763/item/vngoods_03_465763.jpg?width=320"
-                                class="img-thumbnail" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title text-bold">Áo Ba Lỗ Vải Gân</h4>
-                                <p class="card-text"><small class="text-muted">Mã sản phẩm: 458365</small></p>
-                                <p class="card-text">Màu sắc: White</p>
-                                <p class="card-text">Kích cỡ: Nữ XXL</p>
-                                <p class="card-text" style="color:red">244.000 VND</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="decrementValue(this)">-</button>
-                                        <input type="text" class="form-control form-control-sm" value="1" style="max-width: 40px;">
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="incrementValue(this)">+</button>
-                                    </div>                                    
-                                    <p class="card-text m-4">
-                                    <h5 class="ms-auto" style="color:red">Tổng: 244.000 VND</h5>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
                 <!-- Repeat for other products as needed -->
             </div>
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="order-summary">
-                            <h5 class="mb-4">TỔNG ĐƠN HÀNG | 3 SẢN PHẨM</h5>
+                            <h5 class="mb-4">TỔNG ĐƠN HÀNG | {{cart.length}} SẢN PHẨM</h5>
                             <div class="order-total">
-                                <h5>TỔNG: 775.000 VND</h5>
+                                <h5>TỔNG: {{getTotalPrice() | number:0}} VND</h5>
                             </div>
-                            <p class="card-text mt-2 tax-included">Đã bao gồm thuế giá trị gia tăng: 43.407 VND</p>
-                            <h5>TỔNG ĐƠN: 775.000 VND</h5>
+                            <p class="card-text mt-2 tax-included">Đã bao gồm thuế giá trị gia tăng: {{getTax()| number:0}} VND</p>
+                            <h5>TỔNG ĐƠN: {{getMustPay()| number:0}} VND</h5>
                         </div>
                     </div>
-                        <hr>
-                        <div class="container p-0">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            <i class="fa-solid fa-ticket-simple p-1"></i> Phiếu giảm giá
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Nội dung liên quan đến phiếu giảm giá.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="fa-solid fa-gift p-1"></i> Tùy chọn quà tặng
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Nội dung liên quan đến tùy chọn quà tặng.
-                                        </div>
+                    <hr>
+                    <div class="container p-0">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fa-solid fa-ticket-simple p-1"></i> Phiếu giảm giá
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Nội dung liên quan đến phiếu giảm giá.
                                     </div>
                                 </div>
                             </div>
-
-                            <p class="my-3">
-                                Miễn phí giao hàng áp dụng cho đơn hàng giao tận nơi từ 999.000VND và tất cả các đơn
-                                nhận tại cửa hàng (Click & Collect).
-                                <span class="info-circle" data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title="Thông tin thêm">
-                                    <i class="bi bi-info-circle"></i>
-                                </span>
-                            </p>
-
-                            <div class="d-grid gap-2">
-                                <button class="btn p-2" style="background-color: red;color:aliceblue;
-                                ">THANH TOÁN</button>
-                                <button class="btn btn-outline-secondary p-2">TIẾP TỤC MUA SẮM</button>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <i class="fa-solid fa-gift p-1"></i> Tùy chọn quà tặng
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Nội dung liên quan đến tùy chọn quà tặng.
+                                    </div>
+                                </div>
                             </div>
-
-                            <p class="my-3">
-                                Đặt mua thêm 225.000 VND (bao gồm VAT), hoặc chọn hình thức Click & Collect, để được
-                                miễn phí giao hàng.
-                            </p>
                         </div>
+            
+                        <p class="my-3">
+                            Miễn phí giao hàng áp dụng cho đơn hàng giao tận nơi từ 999.000VND và tất cả các đơn nhận tại cửa hàng (Click & Collect).
+                            <span class="info-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Thông tin thêm">
+                                <i class="bi bi-info-circle"></i>
+                            </span>
+                        </p>
+            
+                        <div class="d-grid gap-2">
+                            <button class="btn p-2" style="background-color: red;color:aliceblue;">THANH TOÁN</button>
+                            <button class="btn btn-outline-secondary p-2">TIẾP TỤC MUA SẮM</button>
+                        </div>
+            
+                        <p class="my-3">
+                            Đặt mua thêm 225.000 VND (bao gồm VAT), hoặc chọn hình thức Click & Collect, để được miễn phí giao hàng.
+                        </p>
                     </div>
                 </div>
+            </div>
+            
             </div>
         </div>
     </section>

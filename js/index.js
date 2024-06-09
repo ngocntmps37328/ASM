@@ -138,8 +138,55 @@ angular.module('myapp', ["ngRoute"])
 
         }
     })
-    .controller('cartctrl', function () {
+    .controller('cartctrl', function ($scope, $rootScope) {
+        $scope.cart = $rootScope.cart;
+        $scope.decrementQuantity = function (cartItem) {
+            if (cartItem.quantity > 1) {
+                cartItem.quantity--;
+            }
+        };
 
+        $scope.incrementQuantity = function (cartItem) {
+            cartItem.quantity++;
+        };
+    
+        $scope.updateQuantity = function (cartItem) {
+            cartItem.quantity = $scope.selectedQuantity;
+        };
+    
+        // Function to delete an item from the cart
+        $scope.delete = function (index, event) {
+            if (event) {
+                event.preventDefault(); // Prevent the default action
+                event.stopPropagation(); // Stop the event from bubbling up
+            }
+    
+            $rootScope.cart.splice(index, 1);
+        };
+    
+        $scope.getTotalPrice = function () {
+            var total = 0;
+            for (var i = 0; i < $scope.cart.length; i++) {
+                total += $scope.cart[i].price * $scope.cart[i].quantity;
+            }
+            return total;
+        };
+    
+        $scope.getTax = function () {
+            $scope.total = $scope.getTotalPrice();
+            var tax = 0;
+            tax = $scope.total * 0.1;
+            return tax;
+        };
+    
+        $scope.getMustPay = function () {
+            $scope.total = $scope.getTotalPrice();
+            $scope.tax = $scope.getTax();
+            var mustpay = $scope.total + $scope.tax;
+            return mustpay;
+        };
+    
+        console.log("cart", $scope.cart);
     })
     .controller('modalCtrl', function ($scope, $rootScope, $routeParams) {
         $scope.id = $routeParams.id;
