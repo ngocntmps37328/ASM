@@ -6,7 +6,7 @@ angular.module('myapp', ["ngRoute"])
         $rootScope.$on('$routeChangeSuccess', function () {
             $timeout(function () {
                 $rootScope.loading = false;
-            }, 1000);
+            }, 2000);
         });
         $rootScope.$on('$routeChangeError', function () {
             $rootScope.loading = false;

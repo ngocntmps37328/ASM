@@ -149,9 +149,10 @@
     </div>
     </header>
     <div ng-controller="myctrl">
-        <div ng-show='loading' class="position-fixed top-0 bottom-0 start-0 end-0 text-bg-dark d-flex justify-content-center align-items-center z-3">
-            <i class="fa-solid fa-fan fa-spin fa-spin-reverse"></i>Đang tải trang...
-          </div>
+        <div class="loading-container" ng-show="loading">
+            <div class="loader"></div>
+            <span class="loading-text"> Đang tải trang... </span>
+        </div>
         <ng-view>
         <div class="container">
                 <ng-view></ng-view>   
